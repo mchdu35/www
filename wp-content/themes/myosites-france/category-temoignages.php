@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-
 <div class="row align-items-start">
     <div class="row">
         <div class="col-3">
@@ -11,10 +10,14 @@ get_header();
         <div class="col-7">
             <?php if (have_posts()): ?>
                 <?php while (have_posts()): the_post(); ?>
+
                     <div class="mf-post">
-                        <h5 class="mf-post-title"> <?php the_title(); ?></h5>
+                        <h5 class="mf-post-title"><i class="bi bi-mic"></i> <?php the_title(); ?></h5>
+
                         <p class="mf-post-content">
-                            <?php the_post_thumbnail('post-thumbnail', ['style' => 'width:160px; height:auto', 'class' => 'img-fluid rounded float-start mf-thumbnail']) ?>
+                            <?php if (the_post_thumbnail()): ?>
+                                <img src="<? the_post_thumbnail() ?>" class="card-img-top thumbnail rounded" style="width:60px; height:auto;">
+                            <?php endif; ?>
                             <?php the_content(); ?>
                         </p>
                     </div>

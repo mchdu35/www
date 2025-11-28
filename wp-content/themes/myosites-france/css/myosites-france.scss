@@ -1,15 +1,20 @@
+@import 'variables';
+
+
 #menu-lateral {
+    margin-top: $margin-small;
     padding: 0.75rem;
     background-color: aliceblue;
     border-style: solid;
     border-width: 1px;
-    border-radius: 10px;
+    border-radius: $border-radius;
 
     ul {
        list-style-type: none;
+
        li.nav-item {
 
-            margin:0.5rem 0px;
+              margin:0.25rem 0px;
 
             a {
                 padding-left:0.5rem;
@@ -24,15 +29,31 @@
             /* Elément courant */
             &.current-menu-item {
                 
-                
                & > a {
                     font-weight: bold;
                     border-left-color: #1d87da;
-                    border-left-style: solid;
+                    border-left-style: solid; 
                     border-left-width: 3px;
                 }
                 
             }
         }  
     } 
+}
+
+.mf-post {
+    margin-top: $margin-large;
+    background-color: #E0EAF8;
+    padding: $padding-medium;
+    border-radius: $border-radius;
+
+    .mf-thumbnail {
+        margin-right: $margin-large;
+        margin-bottom: $margin-large;
+    }
+
+    .mf-post-title {
+        padding-bottom: $padding-small;
+        border-bottom: 2px solid #1d87da;
+    }
 }
