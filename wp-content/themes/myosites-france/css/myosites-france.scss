@@ -56,4 +56,16 @@
         padding-bottom: $padding-small;
         border-bottom: 2px solid #1d87da;
     }
+
+    .mf-post-infos {
+        display: flex;
+        justify-content: end;
+        font-style: italic;
+        font-size: small;
+        &:before {
+            width: 16px;
+            content: '\270f';
+            margin-right: 0.25rem;
+        }
+    }
 }

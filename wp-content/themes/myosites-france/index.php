@@ -17,36 +17,40 @@ get_header();
                             <?php the_post_thumbnail('post-thumbnail', ['style' => 'width:160px; height:auto', 'class' => 'img-fluid rounded float-start mf-thumbnail']) ?>
                             <?php the_content(); ?>
                         </p>
+                        <p class="mf-post-infos">
+                            <?php $dateArticle = get_the_date('', '', '', false); ?>
+                            Publié <?php if ($dateArticle): ?>le <?php endif; ?> <?php echo $dateArticle; ?> par <?php the_author(); ?>
+                        </p>
                     </div>
-
-
-                    <?php if (is_front_page() && is_main_site()) : ?>
-                        <div class="container text-center">
-                            <div class="row">
-                                <div class="col">
-                                    <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-i.png'; ?>" style="width:200px; height:auto;"></a>
-                                </div>
-                                <div class="col">
-                                    <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-ch.png'; ?>" style="width:200px; height:auto;"></a>
-                                </div>
-                                <div class="col">
-                                    <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-nai.png'; ?>" style="width:200px; height:auto;"></a>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-pm.png'; ?>" style="width:200px; height:auto;"></a>
-                                </div>
-                                <div class="col">
-                                    <a class="navbar-brand" href="/dermatomyosite-juvenile"><img src="<?php echo get_template_directory_uri() . '/images/logo-dmj.png'; ?>" style="width:200px; height:auto;"></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    <?php endif; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
+
+            <?php if (is_front_page() && is_main_site()) : ?>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-i.png'; ?>" style="width:200px; height:auto;"></a>
+                        </div>
+                        <div class="col">
+                            <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-ch.png'; ?>" style="width:200px; height:auto;"></a>
+                        </div>
+                        <div class="col">
+                            <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-nai.png'; ?>" style="width:200px; height:auto;"></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <a class="navbar-brand" href="javascript:;"><img src="<?php echo get_template_directory_uri() . '/images/logo-pm.png'; ?>" style="width:200px; height:auto;"></a>
+                        </div>
+                        <div class="col">
+                            <a class="navbar-brand" href="/dermatomyosite-juvenile"><img src="<?php echo get_template_directory_uri() . '/images/logo-dmj.png'; ?>" style="width:200px; height:auto;"></a>
+                        </div>
+                    </div>
+
+                </div>
+            <?php endif; ?>
+
         </div>
     </div>
 

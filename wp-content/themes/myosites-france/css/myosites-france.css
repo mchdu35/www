@@ -34,3 +34,12 @@
   .mf-post .mf-post-title {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #1d87da; }
+  .mf-post .mf-post-infos {
+    display: flex;
+    justify-content: end;
+    font-style: italic;
+    font-size: small; }
+    .mf-post .mf-post-infos:before {
+      width: 16px;
+      content: '\270f';
+      margin-right: 0.25rem; }
