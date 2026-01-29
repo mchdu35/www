@@ -30,12 +30,13 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Barre de navigation -->
+                <!-- Barre de navigation avec dropdowns Bootstrap 5 -->
                 <?php
                 wp_nav_menu([
                     'theme_location' => 'headermenu',
                     'container' => false,
-                    'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0'
+                    'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0',
+                    'walker' => new Walker_Nav_Menu_MF()
                 ]);
                 ?>
 
