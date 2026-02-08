@@ -1,167 +1,27 @@
 @charset "UTF-8";
-
-/* ===== NAVBAR DROPDOWNS - HOVER ===== */
-
-/* Ouvrir les dropdowns au hover ET avec classe .show (desktop) */
-@media (min-width: 992px) {
-  /* Niveau 1 -> 2 : hover ou .show */
-  .navbar .dropdown:hover > .dropdown-menu,
-  .navbar .dropdown.show > .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-
-  /* Niveau 2 -> 3+ : s'ouvre vers la droite */
-  .navbar .dropdown-menu .dropdown:hover > .dropdown-menu,
-  .navbar .dropdown-menu .dropdown.show > .dropdown-menu {
-    display: block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    margin-top: 0;
-    margin-left: 0.125rem;
-  }
-
-  /* Empêcher le clic de fermer immédiatement */
-  .navbar .dropdown-toggle {
-    pointer-events: auto;
-  }
-}
-
-.navbar .dropdown-menu {
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  min-width: 200px;
-}
-
-/* Sous-menus positionnés correctement */
-.navbar .dropdown-menu .dropdown-menu {
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.navbar .dropdown-item {
-  padding: 0.5rem 1rem;
-}
-
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  background-color: #008ECC;
-  color: #ffffff;
-}
-
-.navbar .dropdown-item.active {
-  background-color: #1d87da;
-}
-
-/* Flèche pour les éléments qui ont des sous-menus */
-.navbar .dropdown-toggle::after {
-  margin-left: 0.5rem;
-}
-
-/* Flèche vers la droite pour les sous-sous-menus */
-.navbar .dropdown-menu .dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar .dropdown-menu .dropdown-toggle::after {
-  border-left: 0.3em solid;
-  border-top: 0.3em solid transparent;
-  border-bottom: 0.3em solid transparent;
-  border-right: 0;
-  margin-left: 0.5rem;
-  flex-shrink: 0;
-}
-
-/* Mobile : les sous-menus s'empilent */
-@media (max-width: 991.98px) {
-  .navbar .dropdown-menu {
-    position: static;
-    float: none;
-    box-shadow: none;
-    border: none;
-    padding-left: 1rem;
-  }
-
-  .navbar .dropdown-menu .dropdown-menu {
-    padding-left: 1rem;
-  }
-
-  /* Sur mobile, afficher les sous-menus par défaut ou au clic */
-  .navbar .dropdown-menu .dropdown-toggle::after {
-    float: right;
-  }
-}
-
-/* ===== MENU LATERAL ===== */
 #menu-lateral {
   margin-top: 0.5rem;
   padding: 0.75rem;
   background-color: aliceblue;
   border-style: solid;
   border-width: 1px;
-  border-radius: 8px;
-}
-
-#menu-lateral ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-#menu-lateral .nav-item {
-  margin: 0.25rem 0;
-}
-
-#menu-lateral .nav-link,
-#menu-lateral .dropdown-item {
-  padding: 0.5rem 0.75rem;
-  color: #333;
-  border-radius: 4px;
-  text-decoration: none;
-  display: block;
-}
-
-#menu-lateral .nav-link:hover,
-#menu-lateral .dropdown-item:hover {
-  background-color: #008ECC;
-  color: #ffffff;
-  border-left: 3px solid #000;
-}
-
-#menu-lateral .nav-link.active,
-#menu-lateral .dropdown-item.active {
-  font-weight: bold;
-  border-left: 3px solid #1d87da;
-  background-color: rgba(29, 135, 218, 0.1);
-}
-
-/* Sous-menus dans le menu lateral */
-#menu-lateral .dropdown-menu {
-  position: static;
-  display: none;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  padding-left: 1rem;
-}
-
-#menu-lateral .dropdown.show > .dropdown-menu {
-  display: block;
-}
-
-#menu-lateral .dropdown-toggle::after {
-  float: right;
-  margin-top: 0.5rem;
-}
-
-/* Elément courant - rétrocompatibilité */
-#menu-lateral .current-menu-item > a {
-  font-weight: bold;
-  border-left: 3px solid #1d87da;
-}
+  border-radius: 8px; }
+  #menu-lateral ul {
+    list-style-type: none; }
+    #menu-lateral ul li.nav-item {
+      margin: 0.25rem 0px;
+      /* Elément courant */ }
+      #menu-lateral ul li.nav-item a {
+        padding-left: 0.5rem; }
+        #menu-lateral ul li.nav-item a:hover {
+          border-left: #000 2px solid;
+          background-color: #008ECC;
+          color: #ffffff; }
+      #menu-lateral ul li.nav-item.current-menu-item > a {
+        font-weight: bold;
+        border-left-color: #1d87da;
+        border-left-style: solid;
+        border-left-width: 3px; }
 
 .mf-post {
   margin-top: 1.5rem;
@@ -183,3 +43,12 @@
       width: 16px;
       content: '\270f';
       margin-right: 0.25rem; }
+
+.mf-source {
+  background-color: #286ec9;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 4px;
+  font-size: 10px; }
+
+/*# sourceMappingURL=myosites-france.css.map */

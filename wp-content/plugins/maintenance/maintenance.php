@@ -3,7 +3,7 @@
 	Plugin Name: Maintenance
 	Plugin URI: https://wpmaintenancemode.com/
 	Description: Put your site in maintenance mode, away from the public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible to logged in users.
-	Version: 4.19
+	Version: 4.20
 	Author: WebFactory Ltd
 	Author URI: https://www.webfactoryltd.com/
 	License: GPL2
@@ -160,8 +160,7 @@ class MTNC
     $out .= '</tr>';
 
     $out .= '<tr>';
-    $out .= '<td><a class="button button-buy" data-href-org="https://wpmaintenancemode.com/buy/?product=personal-launch&ref=pricing-table" href="https://wpmaintenancemode.com/buy/?product=personal-launch&ref=pricing-table" target="_blank">Lifetime License<br>$59 -&gt; BUY NOW</a>
-    <br>or <a class="button-buy" data-href-org="https://wpmaintenancemode.com/buy/?product=personal-monthly&ref=pricing-table" href="https://wpmaintenancemode.com/buy/?product=personal-monthly&ref=pricing-table" target="_blank">only $7.99 <small>/month</small></a></td>';
+    $out .= '<td><a class="button button-buy" data-href-org="https://wpmaintenancemode.com/buy/?product=personal-launch&ref=pricing-table" href="https://wpmaintenancemode.com/buy/?product=personal-launch&ref=pricing-table" target="_blank">Lifetime License<br>$59 -&gt; BUY NOW</a></td>';
     $out .= '<td><a class="button button-buy" data-href-org="https://wpmaintenancemode.com/buy/?product=team-launch&ref=pricing-table" href="https://wpmaintenancemode.com/buy/?product=team-launch&ref=pricing-table" target="_blank">Lifetime License<br>$69 -&gt; BUY NOW</a></td>';
     $out .= '<td><a class="button button-buy" data-href-org="https://wpmaintenancemode.com/buy/?product=agency-launch&ref=pricing-table" href="https://wpmaintenancemode.com/buy/?product=agency-launch&ref=pricing-table" target="_blank">Lifetime License<br>$119 -&gt; BUY NOW</a></td>';
     $out .= '</tr>';
